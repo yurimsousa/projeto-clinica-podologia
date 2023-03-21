@@ -1,0 +1,19 @@
+{
+  "name": "projeto-clinica-podologia",
+  "version": "1.0.0",
+  "description": "back end para gerenciamento de uma clinica de podologia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yurimsousa/projeto-clinica-podologia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yurimsousa/projeto-clinica-podologia/issues"
+  },
+  "homepage": "https://github.com/yurimsousa/projeto-clinica-podologia#readme"
+}
