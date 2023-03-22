@@ -1,12 +1,13 @@
-const Database = require("../../database/conectDb");
 const Funcionario = require("../../moldels/funcionario");
+const Database = require("../../database/conectDb");
 
 class ApiService {
 
     async consultaFuncionario() {
-        const db = new Database();
+        console.log("chegou aqui1");
+
+        const db =  new Database();
         try {
-            console.log("chegou aqui");
             const user = await Funcionario.findAll();
             return user;
         } catch (error) {

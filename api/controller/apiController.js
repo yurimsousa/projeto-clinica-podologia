@@ -3,8 +3,7 @@ const apiService = new ApiService();
 
 class ApiController {
 
-     async consultaFuncionario() {
-      const apiService = new ApiService();
+   async consultaFuncionario() {
       return await apiService.consultaFuncionario();
    }
 
@@ -12,6 +11,6 @@ class ApiController {
       const apiService = new ApiService();
       return await apiService.inserirFuncionario(body);
    }
-   
+
 }
 module.exports = ApiController;

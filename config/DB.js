@@ -9,7 +9,6 @@ const get = () => {
     const dbHost = '127.0.0.1';
     const dbPort = 3306;
     const dbDialect = 'mysql';
-   console.log(dbName);
     return {
       dialect: dbDialect,
       host: dbHost,
