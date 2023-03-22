@@ -13,12 +13,12 @@ class Funcionario extends Model {
                 },
                 nome_funcionario: {
                     type: Sequelize.STRING(255),
-                    field: 'NOME',
+                    field: 'NOME_FUNCIONARIO',
                     allowNull: false
                 },
                 telefone_funcionario: {
                     type: Sequelize.STRING(255),
-                    field: 'TELEFONE',
+                    field: 'TELEFONE_FUNCIONARIO',
                     allowNull: false
                 }
             },
