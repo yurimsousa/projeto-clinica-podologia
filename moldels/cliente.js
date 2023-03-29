@@ -1,30 +1,35 @@
 const { Sequelize, Model } = require('sequelize');
 
-class Funcionario extends Model {
+class Cliente extends Model {
     static init(sequelize) {
         super.init(
             {
-                idFuncionario: {
+                idCliente: {
                     type: Sequelize.BIGINT,
                     autoIncrement: true,
                     primaryKey: true,
-                    field: 'id_funcionario'
+                    field: 'id_cliente'
                     
                 },
                 nome: {
                     type: Sequelize.STRING(50),
-                    field: 'nome_funcionario',
+                    field: 'nome_cliente',
+                    allowNull: false
+                },
+                cpf: {
+                    type: Sequelize.STRING(50),
+                    field: 'cpf_cliente',
                     allowNull: false
                 },
                 telefone: {
                     type: Sequelize.STRING(50),
-                    field: 'telefone_funcionario',
+                    field: 'telefone_cliente',
                     allowNull: false
                 }
             },
             {
                 sequelize,
-                modelName: 'funcionario_tb',
+                modelName: 'cliente_tb',
                 timestamps: false
 
             }
@@ -32,4 +37,4 @@ class Funcionario extends Model {
         return this;
     }
 }
-module.exports = Funcionario
+module.exports = Cliente
