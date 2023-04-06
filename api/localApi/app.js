@@ -137,6 +137,16 @@ app.post("/inserir-agenda", async function (request, response) {
     }
 });
 
+app.get("/consulta-prontuario", async function (request, response) {
+    try {
+        const params = request.query;
+        const result = await agendaController.consultaProntuarioParams(params);
+        return response.json(result);
+    } catch (error) {
+        return error;
+    }
+});
+
 
 
 module.exports = app;

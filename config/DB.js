@@ -16,10 +16,10 @@ const get = () => {
       password: dbPassword,
       database: dbName,
       port: dbPort,
-      logging: false,
+      logging: console.log,
       define: {
-        underscored: true,
-        underscoredAll: true,
+        underscored: false,
+        underscoredAll: false,
         freezeTableName: true,
         timestamps: true,
       },

@@ -18,5 +18,9 @@ class AgendaController {
       return await clienteService.deletarCliente(body,id);
    }
    
+   async consultaProntuarioParams(params) {
+      return await agendaService.consultaProntuarioParams(params);
+   }
+   
 }
 module.exports = AgendaController;

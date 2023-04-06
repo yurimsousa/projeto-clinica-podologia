@@ -1,4 +1,5 @@
 const { Sequelize, Model } = require('sequelize');
+const ServicoTB = require("../moldels/servico");
 
 class Agenda extends Model {
     static init(sequelize) {
@@ -9,7 +10,7 @@ class Agenda extends Model {
                     autoIncrement: true,
                     primaryKey: true,
                     field: 'id_agenda_prontuario'
-                    
+
                 },
                 idFuncionario: {
                     type: Sequelize.STRING(50),
@@ -22,7 +23,7 @@ class Agenda extends Model {
                     allowNull: true
                 },
                 dataAgenda: {
-                    type: Sequelize.DATE,
+                    type: Sequelize.DATEONLY,
                     field: 'data_agenda',
                     allowNull: true
                 },
@@ -36,9 +37,9 @@ class Agenda extends Model {
                     field: 'id_cliente',
                     allowNull: true
                 },
-                idEspecialidade: {
+                idServico: {
                     type: Sequelize.STRING(50),
-                    field: 'id_especialidade',
+                    field: 'id_servico',
                     allowNull: true
                 }
             },
@@ -50,6 +51,14 @@ class Agenda extends Model {
             }
         );
         return this;
+    }
+
+
+    static associate(models) {
+        this.belongsTo(models.SERVICO_TB, {
+            foreignKey: 'ID_SERVICO',
+            as: 'servico',
+        });
     }
 }
 module.exports = Agenda

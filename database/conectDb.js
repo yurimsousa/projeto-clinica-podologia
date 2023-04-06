@@ -5,13 +5,13 @@ const Cliente = require('../moldels/cliente');
 const Servico = require('../moldels/servico');
 const Agenda = require('../moldels/agenda');
 
-const models = [Funcionario,Cliente,Servico,Agenda];
+const models = [Agenda, , Servico, Funcionario, Cliente];
 
 class Database {
   constructor() {
     this.init();
   }
-  
+
   init() {
     this.connection = new Sequelize(databaseConfig.get());
     models
