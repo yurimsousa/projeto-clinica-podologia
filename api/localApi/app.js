@@ -4,6 +4,9 @@ const ClienteController = require("../controller/clienteController");
 const clienteController = new ClienteController();
 const ServicoController = require("../controller/servicoController");
 const servicoController = new ServicoController();
+const AgendaController = require("../controller/agendaController");
+const agendaController = new AgendaController();
+
 
 const express = require("express");
 const app = express();
@@ -114,5 +117,26 @@ app.delete("/deletarServico/:id", async function (request, response) {
     const result = await servicoController.deletarServico(body, id);
     return response.json(result);
 });
+
+app.get("/consulta-agenda", async function (request, response) {
+    try {
+        const result = await agendaController.consultaAgenda();
+        return response.json(result);
+    } catch (error) {
+        return error;
+    }
+});
+
+app.post("/inserir-agenda", async function (request, response) {
+    try {
+        const body = request.body;
+        const result = await agendaController.inserirAgenda(body);
+        return response.json(result);
+    } catch (error) {
+        return error;
+    }
+});
+
+
 
 module.exports = app;

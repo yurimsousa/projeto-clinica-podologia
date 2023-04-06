@@ -3,8 +3,9 @@ const databaseConfig = require('../config/DB');
 const Funcionario = require('../moldels/funcionario');
 const Cliente = require('../moldels/cliente');
 const Servico = require('../moldels/servico');
+const Agenda = require('../moldels/agenda');
 
-const models = [Funcionario,Cliente,Servico];
+const models = [Funcionario,Cliente,Servico,Agenda];
 
 class Database {
   constructor() {
