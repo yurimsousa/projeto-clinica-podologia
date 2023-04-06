@@ -55,7 +55,7 @@ class Agenda extends Model {
 
 
     static associate(models) {
-        this.belongsTo(models.SERVICO_TB, {
+        this.belongsTo(models.servico_tb, {
             foreignKey: 'ID_SERVICO',
             as: 'servico',
         });

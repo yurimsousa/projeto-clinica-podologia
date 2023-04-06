@@ -121,12 +121,12 @@ class AgendaService {
             }
 
             const prontuario = await Agenda.findAll({
-                // include: [
-                //     {
-                //         model: Servico,
-                //         as: 'servico'
-                //     }
-                // ],
+                include: [
+                    {
+                        model: Servico,
+                        as: 'servico'
+                    }
+                ],
                 where,
                 nest: true,
                 raw: true,
