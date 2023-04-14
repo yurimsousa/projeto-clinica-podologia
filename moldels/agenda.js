@@ -53,12 +53,20 @@ class Agenda extends Model {
         return this;
     }
 
-
     static associate(models) {
         this.belongsTo(models.servico_tb, {
             foreignKey: 'ID_SERVICO',
             as: 'servico',
         });
+        this.belongsTo(models.funcionario_tb, {
+            foreignKey: 'ID_FUNCIONARIO',
+            as: 'funcionario',
+        });
+        this.belongsTo(models.cliente_tb, {
+            foreignKey: 'ID_CLIENTE',
+            as: 'cliente',
+        });
+
     }
 }
 module.exports = Agenda
